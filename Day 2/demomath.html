@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" text="text/css" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
+    <link rel="stylesheet" text="text/css" href="bower_components/bootstrap/dist/css/bootstrap-theme.css"/>
+</head>
+<body>
+<div class="container panel panel-default" ng-app="hrApp">
+    <div class="panel-heading">
+        <p>Math</p>
+    </div>
+    <div class="panel-body" ng-controller="MathController">
+        <p>
+            First number:<input type="number" ng-model="firstValue"/>
+        </p>
+        <p>
+            Second number:<input type="number" ng-model="secondValue"/>
+        </p>
+        <p>
+            <button ng-click="calculate()">Calculate</button>
+        </p>
+        <br>
+        <p>
+            a+b={{op1}}
+        </p>
+        <p>
+            a-b={{op2}}
+        </p>
+        <p>
+            a*b={{op3}}
+        </p>
+        <p>
+            a/b={{op4}}
+        </p>
+    </div>
+</div>
+<script type="text/javascript" src="bower_components/jquery/jquery.js"></script>
+<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script type="text/javascript" src="bower_components/angular/angular.js"></script>
+<script type="text/javascript" src="scripts/app.js"></script>
+<script type="text/javascript" src="scripts/MathController.js"></script>
+</body>
+</html>
