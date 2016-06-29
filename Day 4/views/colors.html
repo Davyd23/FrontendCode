@@ -1,0 +1,29 @@
+<select ng-options="color.text for color in colors" ng-model="selected"
+        ng-change="changeColor()"></select>
+<select ng-options="color.text for color in colors |orderBy:'type'" ng-model="selected"
+ng-change="changeColor()"></select>
+<span ng-class="seletectedClass">Some text</span>
+<br>
+<br>
+<div class="panel">
+    <div class="panel-heading">
+        <p>
+            Filter by:<input ng-model="filter">
+        </p>
+        <p>
+            Order by:<input ng-model="orderBy">
+        </p>
+    </div>
+    <div class="panel-body">
+        <ul>
+            <li ng-repeat="color in colors|orderBy:orderBy|filter:{text:filter}">{{color.text}}</li>
+        </ul>
+        <ul>
+            <li ng-repeat="color in colors|orderBy:orderBy:true|filter:{text:filter}">{{color.text}}</li>
+        </ul>
+    </div>
+</div>
+
+<p>
+    Filter by date:<input  ng-model="dateFilter|date:'shortDate'"/>
+</p>

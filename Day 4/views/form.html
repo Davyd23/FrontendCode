@@ -1,0 +1,19 @@
+<ng-form name="myForm">
+    Type: <input name="input" ng-model="userType2" required/>
+    <span class="error" ng-show="myForm.input.$error.required">Required!</span><br>
+    userType={{userType2}}<br>
+    myForm.input.$valid={{myForm.input.$valid}}<br>
+    myForm.input.$error={{myForm.input.$error}}<br>
+    myForm.input.$pristine={{myForm.input.$pristine}}<br>
+    myForm.input.$dirty={{myForm.input.$dirty}}<br>
+    myForm.input.$invalid={{myForm.input.$invalid}}<br>
+    myForm.input.$submitted={{myForm.input.$submitted}}<br>
+
+    <br><br>
+
+    <input name="input" ng-model="userType" required/>
+    <span class="error" ng-show="myForm.input.$error.required">Required!</span>
+    <br>
+    <button ng-click="submit()" class="btn btn-primary">Send input</button>
+</ng-form>
+
