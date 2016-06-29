@@ -24,6 +24,21 @@ ng-change="changeColor()"></select>
     </div>
 </div>
 
+<!--filter the date-->
 <p>
-    Filter by date:<input  ng-model="dateFilter|date:'shortDate'"/>
+    <!--Filter by date:<input  ng-model="dateFilter|date:'shortDate'"/>-->
 </p>
+
+
+<p>
+    <!--Filter by date:<input  ng-model="dateFilter|date:'shortDate'"/>-->
+</p>
+
+<!-- input un nr, toate culorile > nr le afisam -->
+<div>
+    <p>Marime <input type="number" ng-model="val"></p>
+
+</div>
+<ul>
+    <li ng-repeat="color in colors | size : val">{{color.text}}</li>
+</ul>
