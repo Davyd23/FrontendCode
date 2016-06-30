@@ -1,0 +1,59 @@
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h2 class="panel-title">Add job</h2>
+    </div>
+    <div class="panel-body">
+        <ng-form name="jobAddForm">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group" >
+
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="form-group">
+
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="form-group">
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group" ng-class="{ 'has-error': jobAddForm.id.$invalid }">
+                <label >Job Id:</label>
+                <input type="text" ng-model="job.jobId" class="form-control" name="id"
+                       required/>
+            </div>
+            <div class="form-group" ng-class="{ 'has-error': jobAddForm.jobTitle.$invalid }" >
+                <label >Job title:</label>
+                <input type="text" ng-model="job.jobTitle" class="form-control" name="jobTitle"
+                       required/>
+            </div>
+            <div class="form-group" ng-class="{ 'has-error': jobAddForm.maxSalary.$invalid }" >
+                <label>Max salary:</label>
+                <input type="text" ng-model="job.maxSalary" class="form-control" name="maxSalary"
+                       required/>
+            </div>
+            <div class="form-group" ng-class="{ 'has-error': jobAddForm.minSalary.$invalid }">
+                <label>Min salary:</label>
+                <input type="text" ng-model="job.minSalary" class="form-control" name="minSalary"
+                       required/>
+            </div>
+
+            <div>
+                <button type="submit" ng-click="reset()">Reset</button>
+                <button type="submit" ng-click="create(job)" ng-disabled="jobAddForm.$invalid">Save</button>
+            </div>
+        </ng-form>
+    </div>
+</div>
